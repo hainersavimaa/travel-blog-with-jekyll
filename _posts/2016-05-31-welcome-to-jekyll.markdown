@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  Proovipr
 date:   2016-05-31 17:28:07 +0300
 categories: jekyll update
 cover: cover.jpg

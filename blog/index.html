@@ -3,13 +3,7 @@ layout: default
 ---
 <div class="blog-index">
    <h1>Travel blog</h1>
-
-   <ul>
-      {% for post in site.posts %}
-         <li>
-            <img src="{{site.baseurl}}/img/{{post.cover}}">
-            <a href="{{site.baseurl}}/{{post.url}}">{{post.title}}</a>
-         </li>
-      {% endfor %}
+   {% include post-archives.html %}
    </ul>
+
 </div>

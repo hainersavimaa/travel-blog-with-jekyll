@@ -29,6 +29,7 @@ var store = [{% for post in site.posts %}{
 // builds search
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
+     $('.all-posts-wrap').hide();
     var resultdiv = $('#results ul');
     // Get query
     var query = $(this).val();

@@ -17,6 +17,7 @@ comments: true
            {% if page.next.url %}
              <a class="next" href="{{site.baseurl}}{{page.next.url}}">NEWER &raquo;</a>
            {% endif %}
+           <a href=""></a>
          </div>
    </header>
    <main class="post-content">
@@ -28,7 +29,7 @@ comments: true
                  var d = document, s = d.createElement('script');
 
                  s.src = '//travelblogwithjekyll.disqus.com/embed.js';
-                 
+
                  s.setAttribute('data-timestamp', +new Date());
                  (d.head || d.body).appendChild(s);
              })();

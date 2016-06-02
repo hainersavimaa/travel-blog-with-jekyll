@@ -2,6 +2,8 @@
 layout: post
 title: "Home life: living without money"
 cover: cover2.jpg
+cover-sm: cover2-sm.jpg
+cover-thumb: cover2-thumb.jpg
 categories: home-life
 ---
 

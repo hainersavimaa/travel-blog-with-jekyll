@@ -7,32 +7,37 @@ comments: true
       {% include post-aside.html %}
    </aside>
    <div class="post-block block">
-      <header class="post-header" style="background-image: url({{site.baseurl}}/img/{{page.cover}});">
-         <a href="#" class="post-aside-cta"> All Posts</a>
-         <h1>{{page.title}}</h1>
-         <div class="PageNavigation">
-           {% if page.previous.url %}
-             <a class="prev" href="{{site.baseurl}}{{page.previous.url}}">&laquo; OLDER</a>
-           {% endif %}
-           {% if page.next.url %}
-             <a class="next" href="{{site.baseurl}}{{page.next.url}}">NEWER &raquo;</a>
-           {% endif %}
-           <script>
-            //keyboard navigation using left-right
-               document.onkeydown = checkKey;
-               function checkKey(e) {
-                  if (e.keyCode == '37') {
-                     {% if page.previous.url %}
-                        window.location = '{{site.baseurl}}{{page.previous.url}}';
-                     {% endif %}
+      <header class="post-header">
+         <div class="container">
+            <img class="header-cover" src="{{site.baseurl}}/img/sm/{{page.cover-sm}}" srcset="{{site.baseurl}}/img/sm/{{page.cover-sm}} 450w, {{site.baseurl}}/img/cover/{{page.cover}} 2000w"/>
+         </div>
+         <div class="header-post-info">
+            <a href="#" class="post-aside-cta"> All Posts</a>
+            <h1>{{page.title}}</h1>
+            <div class="PageNavigation">
+              {% if page.previous.url %}
+                <a class="prev" href="{{site.baseurl}}{{page.previous.url}}">&laquo; OLDER</a>
+              {% endif %}
+              {% if page.next.url %}
+                <a class="next" href="{{site.baseurl}}{{page.next.url}}">NEWER &raquo;</a>
+              {% endif %}
+              <script>
+               //keyboard navigation using left-right
+                  document.onkeydown = checkKey;
+                  function checkKey(e) {
+                     if (e.keyCode == '37') {
+                        {% if page.previous.url %}
+                           window.location = '{{site.baseurl}}{{page.previous.url}}';
+                        {% endif %}
+                     }
+                     else if (e.keyCode == '39') {
+                        {% if page.next.url %}
+                           window.location = '{{site.baseurl}}{{page.next.url}}';
+                        {% endif %}
+                     }
                   }
-                  else if (e.keyCode == '39') {
-                     {% if page.next.url %}
-                        window.location = '{{site.baseurl}}{{page.next.url}}';
-                     {% endif %}
-                  }
-               }
-           </script>
+              </script>
+           </div>
          </div>
    </header>
    <main class="post-content">

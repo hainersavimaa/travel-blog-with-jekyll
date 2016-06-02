@@ -14,8 +14,8 @@
    <ul class="post-box">
       {% for post in site.posts %}
          <li>
-            <img src="{{site.baseurl}}/img/{{post.cover}}">
-            <a href="{{site.baseurl}}/{{post.url}}#disqus_thread">{{post.title}}</a>
+            <img src="{{site.baseurl}}/img/thumbnails/{{post.cover-thumb}}">
+            <a href="{{site.baseurl}}/{{post.url}}">{{post.title}}</a>
          </li>
       {% endfor %}
    </ul>

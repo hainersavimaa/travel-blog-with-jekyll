@@ -1,23 +1,51 @@
 header.post-header
-   width: 50%
-   float: left
-   height: 100vh
-   background-size: cover
+   position: relative
+   height: 80vh
    background-color: white
    color: white
    padding: 5%
-   h1
-      font-size: 34px
-      line-height: 1.1
-   .post-aside-cta
-      border: 1px solid white
-      padding: 5px 25px
-      font-size: 18px
-      font-weight: bold
-      letter-spacing: 1
-      text-transform: uppercase
-      text-decoration: none
-      color: white
+   .container
+      z-index: 0
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      overflow: hidden
+      .header-cover
+         z-index: 0
+         position: absolute
+         top: 50%
+         left: 50%
+         width: auto
+         height: auto
+         max-height: none
+         max-width: none
+         min-height: 100%
+         min-width: 100%
+         transform: translate(-50%, -50%)
+         -ms-transform: translate(-50%, -50%)
+         -webkit-transform: translate(-50%, -50%)
+   .header-post-info
+      position: relative
+      z-index: 20
+      h1
+         font-size: 34px
+         line-height: 1.1
+      .post-aside-cta
+         border: 1px solid white
+         padding: 5px 25px
+         font-size: 18px
+         font-weight: bold
+         letter-spacing: 1
+         text-transform: uppercase
+         text-decoration: none
+         color: white
 
-   .post-aside-open-hidden
-      display: none
+      .post-aside-open-hidden
+         display: none
+@media only screen and (min-width:720px)
+   header.post-header
+      width: 50%
+      float: left
+      height: 100vh

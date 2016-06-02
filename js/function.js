@@ -9,4 +9,5 @@ $(document).ready(function(){
       }
       $('.PageNavigation').toggleClass('post-aside-open-hidden');
    })
+   
 });

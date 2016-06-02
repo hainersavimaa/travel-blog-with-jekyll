@@ -1,11 +1,10 @@
 ul.post-box
    li
       position: relative
-      float: left
+      margin: 10px auto
       display: block
-      width: 300px
-      height: 300px
-      margin: 20px 10px
+      width: 90%
+      max-height: 300px
       list-style: none
       border: 1px solid #eee
       overflow: hidden
@@ -18,5 +17,14 @@ ul.post-box
          top: 50%
          left: 50%
          transform: translate(-50%, -50%)
+         color: white
+         text-decoration: none
    li > *
       display: block
+@media only screen and (min-width: 720px)
+   ul.post-box
+      li
+         width: 300px
+         height: 300px
+         float: left
+         margin: 20px 10px

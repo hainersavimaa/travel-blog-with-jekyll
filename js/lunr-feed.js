@@ -21,7 +21,7 @@ console.log( jQuery.type(index) );
 var store = [{% for post in site.posts %}{
   "title": {{post.title | jsonify}},
   "link": {{ post.url | jsonify }},
-  "image": {{ post.cover | jsonify }},
+  "image": {{ post.cover-thumb | jsonify }},
   "date": {{ post.date | date: '%B %-d, %Y' | jsonify }},
   "category": {{ post.categories | jsonify }},
   "excerpt": {{ post.content | strip_html | truncatewords: 20 | jsonify }}
@@ -42,7 +42,7 @@ $(document).ready(function() {
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
+      var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
       resultdiv.append(searchitem);
     }
 });
@@ -62,7 +62,7 @@ $(document).ready(function() {
       // Loop through, match, and add results
       for (var item in result) {
         var ref = result[item].ref;
-        var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
+        var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
         resultdiv.append(searchitem);
    }
       $('.categories-list span').removeClass('active-category')

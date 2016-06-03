@@ -1,12 +1,7 @@
 ---
 ---
 
-
-
 $(document).ready(function(){
-   $('body').addClass("dom_col")
-   //$('.post-header .container').css('background-color', '#'+dom_col);
-
    $('.post-aside-cta').click(function(){
       $('.post-block').toggleClass('post-aside-open');
       if($('.post-block').hasClass('post-aside-open')){
@@ -20,6 +15,15 @@ $(document).ready(function(){
       }
       $('.PageNavigation').toggleClass('post-aside-open-hidden');
    });
+   //Cover image fade-in over placeholder background
+   $('.container').each(function () {
+      var $wrapper = $(this);
+      var img = $wrapper.find('#coverImage')[0];
 
-
+      var tempImg = new Image();
+      tempImg.src = img.src;
+      tempImg.onload = function () {
+       $wrapper.addClass('loaded');
+      };
+  });
 });

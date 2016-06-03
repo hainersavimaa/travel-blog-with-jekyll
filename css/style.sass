@@ -18,8 +18,9 @@ html
    display: table
 .cf:after
    clear: both
-  
+
 body
+   font-family: 'Open Sans', sans-serif
    margin: 0
    .post-wrap
       position: relative
@@ -30,15 +31,18 @@ body
          top: 20px
          right: 20px
          z-index: 30
-         border: 1px solid white
-         padding: 5px 25px
-         font-size: 18px
+         border: 2px solid rgba(255,255,255,1)
+         padding: 10px 19px 10px 20px
+         font-size: 14px
          font-weight: bold
-         letter-spacing: 1
+         letter-spacing: 2px
          text-transform: uppercase
          text-decoration: none
-         color: white
-
+         color: rgba(255,255,255,1)
+         transition: all 0.3s ease
+         &:hover
+            color: rgba(255,255,255,0.7)
+            border-color: rgba(255,255,255,0.7)
       .post-aside-open-hidden
          display: none
 @media only screen and (min-width: 720px)

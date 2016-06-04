@@ -7,6 +7,15 @@ $(document).ready(function(){
       if($('.post-block').hasClass('post-aside-open')){
          $('.post-aside-cta').text("Hide posts");
          $('.post-aside-cta').addClass('cta-open');
+         $('.post-aside').scroll(function(){
+            var ScrollTop = parseInt($('.post-aside').scrollTop());
+            console.log(ScrollTop)
+            if(ScrollTop > 40){
+               $('.post-aside-cta').fadeOut();
+            } else{
+               $('.post-aside-cta').fadeIn();
+            }
+         });
          $('.post-block').click(function(){
             $('.post-block').removeClass('post-aside-open');
          });

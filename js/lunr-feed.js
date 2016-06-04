@@ -38,11 +38,12 @@ $(document).ready(function() {
     // Show results
     resultdiv.empty();
     // Add status
+    $('#results').show();
     resultdiv.prepend('<p class="">Found '+result.length+' result(s)</p>');
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
+      var searchitem = '<a href="{{site.baseurl}}'+store[ref].link+'" class="post-title"><li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><p class="post-title>"'+store[ref].title+'</p><p class="post-date">'+store[ref].category+' &times; '+store[ref].date+'</p></div></li></a>';
       resultdiv.append(searchitem);
     }
 });
@@ -62,7 +63,7 @@ $(document).ready(function() {
       // Loop through, match, and add results
       for (var item in result) {
         var ref = result[item].ref;
-        var searchitem = '<li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><a href="{{site.baseurl}}'+store[ref].link+'" class="post-title">'+store[ref].title+'</a><div class="post-date small">'+store[ref].category+' &times; '+store[ref].date+'</div><p>'+store[ref].excerpt+'</p></li>';
+        var searchitem = '<a href="{{site.baseurl}}'+store[ref].link+'" class="post-title"><li class="result"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"><div class="result-body"><p class="post-title">'+store[ref].title+'</p><p class="post-date">'+store[ref].category+' &times; '+store[ref].date+'</p></div></li></a>';
         resultdiv.append(searchitem);
    }
       $('.categories-list span').removeClass('active-category')

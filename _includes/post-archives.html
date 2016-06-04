@@ -7,16 +7,21 @@
 <div>
    <input placeholder="Search&hellip;" type="search" id="search" class="search-input">
    <div id="results" class="all-posts results">
-      <ul></ul>
+      <ul class="post-box"></ul>
    </div>
 </div>
 <div class="all-posts-wrap cf">
    <ul class="post-box">
       {% for post in site.posts %}
-         <li>
-            <img src="{{site.baseurl}}/img/thumbnails/{{post.cover-thumb}}">
-            <a href="{{site.baseurl}}/{{post.url}}">{{post.title}}</a>
-         </li>
+         <a href="{{site.baseurl}}/{{post.url}}">
+            <li>
+               <img src="{{site.baseurl}}/img/thumbnails/{{post.cover-thumb}}">
+               <div class="result-body">
+                  <p class="post-title">{{post.title}}</p>
+                  <p class="post-date">{{post.categories}}&times;{{post.date | date: '%B %d, %Y'}}</p>
+               </div>
+            </li>
+         </a>
       {% endfor %}
    </ul>
 </div>

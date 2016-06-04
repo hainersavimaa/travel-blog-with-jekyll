@@ -1,6 +1,5 @@
 ul.post-box
    li
-      position: relative
       margin: 10px auto
       display: block
       width: 90%
@@ -9,22 +8,23 @@ ul.post-box
       border: 1px solid #eee
       overflow: hidden
       img
+         display: block
          min-width: 100%
-         height: 100%
+         max-height: 70%
          overflow: hidden
-      a
-         position: absolute
-         top: 50%
-         left: 50%
-         transform: translate(-50%, -50%)
-         color: white
-         text-decoration: none
+      .result-body
+         height: 30%
+         background: white
+         a
+            font-size: 20px
+            color: black
+            text-decoration: none
    li > *
       display: block
 @media only screen and (min-width: 720px)
    ul.post-box
       li
-         width: 300px
-         height: 300px
+         width: 50%
+         height: 350px
          float: left
          margin: 20px 10px

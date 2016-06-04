@@ -11,11 +11,15 @@
    </div>
 </div>
 <div class="all-posts-wrap cf">
-   <ul class="post-box">
+   <ul class="post-box cf">
       {% for post in site.posts %}
          <a href="{{site.baseurl}}/{{post.url}}">
             <li>
-               <img src="{{site.baseurl}}/img/thumbnails/{{post.cover-thumb}}">
+               <div class="thumbnail">
+                  <div class="image-wrapper">
+                     <img src="{{site.baseurl}}/img/sm/{{post.cover-sm}}">
+                  </div>
+               </div>
                <div class="result-body">
                   <p class="post-title">{{post.title}}</p>
                   <p class="post-date">{{post.categories}}&times;{{post.date | date: '%B %d, %Y'}}</p>

@@ -29,7 +29,18 @@ var store = [{% for post in site.posts %}{
 // builds search
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
-     $('.all-posts-wrap').hide();
+    //$('.all-posts-wrap').hide();
+    $('.search-area').addClass('search-active');
+    if($('.search-area').hasClass('search-active')){
+      $('.post-aside-cta').hide();
+      $('.close-btn').click(function(){
+         $('.search-area').removeClass('search-active');
+         $('.post-aside-cta').show();
+         console.log("clicked");
+      })
+   } else {
+      $('.post-aside-cta').show();
+   }
     var resultdiv = $('#results ul');
     // Get query
     var query = $(this).val();
@@ -40,18 +51,23 @@ $(document).ready(function() {
     // Add status
     $('#results').show();
     resultdiv.prepend('<p class="">Found '+result.length+' result(s)</p>');
+    if(result.length==0){
+      resultdiv.prepend('<p class="">Try going through the categories above to find what you are looking for</p>');
+   }
     // Loop through, match, and add results
     for (var item in result) {
       var ref = result[item].ref;
-      var searchitem = '<a href="{{site.baseurl}}'+store[ref].link+'" class="post-title"><li class="result"><div class="thumbnail"><div class="image-wrapper"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"></div></div><div class="result-body"><p class="post-title>"'+store[ref].title+'</p><p class="post-date">'+store[ref].category+' &times; '+store[ref].date+'</p></div></li></a>';
+      var searchitem = '<a href="{{site.baseurl}}'+store[ref].link+'" class="post-title"><li class="result"><div class="thumbnail"><div class="image-wrapper"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"></div></div><div class="result-body"><p class="post-title">'+store[ref].title+'</p><p class="post-date">'+store[ref].category+' &times; '+store[ref].date+'</p></div></li></a>';
       resultdiv.append(searchitem);
     }
 });
 //Show posts by category
    $('.categories-list span:not(:first-child)').click(function(){
-      $('.all-posts-wrap').hide();
-      $('#results').show();
-      var resultdiv = $('#results ul');
+      $('.all-posts-wrap .post-box').hide();
+      $('.all-posts-wrap .post-box-cat').show();
+      $('.search-area').removeClass('search-active');
+      //$('#results').show();
+      var resultdiv = $('.all-posts-wrap .post-box-cat');
       // Get query
       var query = $(this).text();
       // Search for it
@@ -64,14 +80,14 @@ $(document).ready(function() {
       for (var item in result) {
         var ref = result[item].ref;
         var searchitem = '<a href="{{site.baseurl}}'+store[ref].link+'" class="post-title"><li class="result"><div class="thumbnail"><div class="image-wrapper"><img src="{{site.baseurl}}/img/thumbnails/'+store[ref].image+'" alt="'+store[ref].title+'" class="result-img"></div></div><div class="result-body"><p class="post-title">'+store[ref].title+'</p><p class="post-date">'+store[ref].category+' &times; '+store[ref].date+'</p></div></li></a>';
-        resultdiv.append(searchitem);
+        resultdiv.hide().append(searchitem).fadeIn();
    }
       $('.categories-list span').removeClass('active-category')
       $(this).addClass('active-category');
   });
   $('.categories-list span:first-child').click(function(){
-     $('#results').hide();
-     $('.all-posts-wrap').show();
+     $('.all-posts-wrap .post-box').fadeIn();
+     $('.all-posts-wrap .post-box-cat').hide();
      $('.categories-list span').removeClass('active-category')
      $(this).addClass('active-category');
   });

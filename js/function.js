@@ -7,9 +7,9 @@ $(document).ready(function(){
       if($('.post-block').hasClass('post-aside-open')){
          $('.post-aside-cta').text("Hide posts");
          $('.post-aside-cta').addClass('cta-open');
+         $('.categories-list span:first-child').addClass('active-category')
          $('.post-aside').scroll(function(){
             var ScrollTop = parseInt($('.post-aside').scrollTop());
-            console.log(ScrollTop)
             if(ScrollTop > 40){
                $('.post-aside-cta').fadeOut();
             } else{

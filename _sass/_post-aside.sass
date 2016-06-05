@@ -8,6 +8,45 @@ aside.post-aside
    background: #EDEDED
    width: 100%
    overflow-y: auto
+   .search-area
+      padding: 0 3% 3%
+      .close-btn
+         display: none
+      .results
+         display: none
+      input[type="search"]
+         display: block
+         width: 100%
+         background-color: transparent
+         padding: 10px
+         border: none
+         border-bottom: solid 2px #c9c9c9
+         transition: border 0.3s
+      input[type="search"]:focus, input[type="search"].focus
+         border-bottom: solid 2px #969696
+         outline: none
+   .search-active
+      background: #EDEDED
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      z-index: 100
+      padding-top: 120px
+      .results
+         display: block
+      .close-btn
+         content: "X"
+         cursor: pointer
+         position: absolute
+         top: 10px
+         right: 10px
+         display: block
+         padding: 10px
+         font-size: 28px
+      input[type="search"]
+         font-size: 28px
 
 @media only screen and (min-width: 720px)
    aside.post-aside

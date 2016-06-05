@@ -1,25 +1,5 @@
 ---
-layout: default
+layout: blog-index
 ---
 
-<div class="home">
-
-  <h1><a href="{{site.baseurl}}/blog"> Take me to the blog!</a></h1>
-  <div class="latest-posts-belt">
-  <h3>Latest posts: </h6>
-     <ul class="post-list">
-       {% for post in site.posts limit: 3 %}
-       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-         <li>
-           <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-           <h3>
-             {{ post.title }}
-          </h3>
-         </li>
-         </a>
-       {% endfor %}
-     </ul>
- </div>
-  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
-
-</div>
+<h1><a href="{{site.baseurl}}/blog"> Take me to the blog!</a></h1>

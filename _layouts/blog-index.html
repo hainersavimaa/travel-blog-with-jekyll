@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header>
+   <nav>
+      <ul>
+         <li><a href="#">Home</a></li>
+         <li><a href="#">About us</a></li>
+         <li><a href="#">Contact</a></li>
+      </ul>
+   </nav>
+   <div class="header-logo"></div>
+   <div class="post-slider">
+      {% for post in site.posts | limit:3 %}
+         <div class="slider-item">
+            <p>{{post.title}}</p>
+            <a href="{{site.baseurl}}/{{post.url}}" class="post-cta">Read more</a>
+         </div>
+      {% endfor %}
+   </div>
+</header>
+<main>
+   <div class="instagram-feed"><h1>Instagram feed</h1></div>   
+   {{content}}
+</main>

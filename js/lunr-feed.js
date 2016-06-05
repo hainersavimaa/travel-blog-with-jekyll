@@ -30,11 +30,11 @@ var store = [{% for post in site.posts %}{
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
     //$('.all-posts-wrap').hide();
-    $('.search-area').addClass('search-active');
-    if($('.search-area').hasClass('search-active')){
+    $('.post-aside .search-area').addClass('search-active');
+    if($('.post-aside .search-area').hasClass('search-active')){
       $('.post-aside-cta').hide();
       $('.close-btn').click(function(){
-         $('.search-area').removeClass('search-active');
+         $('.post-aside .search-area').removeClass('search-active');
          $('.post-aside-cta').show();
          console.log("clicked");
       })
@@ -65,7 +65,7 @@ $(document).ready(function() {
    $('.categories-list span:not(:first-child)').click(function(){
       $('.all-posts-wrap .post-box').hide();
       $('.all-posts-wrap .post-box-cat').show();
-      $('.search-area').removeClass('search-active');
+      $('.post-aside .search-area').removeClass('search-active');
       //$('#results').show();
       var resultdiv = $('.all-posts-wrap .post-box-cat');
       // Get query

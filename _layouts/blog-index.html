@@ -2,25 +2,32 @@
 layout: default
 ---
 
-<header>
-   <nav>
-      <ul>
-         <li><a href="#">Home</a></li>
-         <li><a href="#">About us</a></li>
-         <li><a href="#">Contact</a></li>
-      </ul>
-   </nav>
-   <div class="header-logo"></div>
-   <div class="post-slider">
-      {% for post in site.posts | limit:3 %}
-         <div class="slider-item">
-            <p>{{post.title}}</p>
-            <a href="{{site.baseurl}}/{{post.url}}" class="post-cta">Read more</a>
+<div class="blog-index">
+   <header>
+      <nav>
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+         </ul>
+      </nav>
+      <div class="header-logo"><h1>Janne&Hainer</h1></div>
+      <div class="post-slider-wrapper">
+         <span class="navigation prev">&#8249;</span>
+         <span class="navigation next">&#8250;</span>
+         <div class="post-slider">
+            {% for post in site.posts | limit:3 %}
+               <div class="slider-item" style="background-image: url({{site.baseurl}}/img/sm/{{post.cover-sm}});">
+                  <span class="tag">Latest</span>
+                  <p class="slider-item-title">{{post.title}}</p>
+                  <a href="{{site.baseurl}}/{{post.url}}" class="post-cta">Read more</a>
+               </div>
+            {% endfor %}
          </div>
-      {% endfor %}
    </div>
-</header>
-<main>
-   <div class="instagram-feed"><h1>Instagram feed</h1></div>   
-   {{content}}
-</main>
+   </header>
+   <main>
+      <div class="instagram-feed"><h1>Instagram feed</h1></div>
+      {{content}}
+   </main>
+</div>

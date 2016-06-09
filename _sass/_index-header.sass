@@ -1,0 +1,109 @@
+header
+   overflow: hidden
+   nav
+      border-bottom: 1px solid #eee
+      ul
+         margin: 0
+         padding: 0
+         text-align: center
+         li
+            list-style: none
+            display: inline-block
+            padding: 20px 5px
+            margin: 8px
+            a
+               color: #666
+               font-size: 14px
+               font-weight: 600
+               text-transform: uppercase
+   .header-logo
+      height: 15vh
+      h1
+         text-align: center
+         font-size: 32px
+   .post-slider-wrapper
+      width: 100%
+      position: relative
+      span.navigation
+         display: block
+         position: absolute
+         top: 50%
+         transform: translateY(-50%)
+         color: rgba(255,255,255,0.7)
+         font-size: 72px
+         z-index: 100
+         cursor: pointer
+         padding: 2px 5px
+         &:hover
+            color: rgba(255,255,255,1)
+      .prev
+         left: 5%
+         transform: translateX(-50%)
+      .next
+         right: 5%
+         transform: translateX(50%)
+      .post-slider
+         height: 50vh
+         width: 300%
+         left: 0%
+         position: relative
+         transition: left 0.3s ease-in-out
+         .slider-item
+            width: 33.33%
+            height: 100%
+            float: left
+            background-size: cover
+            background-position: center center
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            .tag
+               color: rgba(255,255,255,1)
+               text-transform: uppercase
+               letter-spacing: 1px
+               font-weight: 600
+               font-size: 14px
+               border-bottom: 3px solid white
+               padding-bottom: 20px
+            .slider-item-title
+               color: white
+               font-size: 24px
+               letter-spacing: 1px
+               padding: 10px 5% 20px
+               text-align: center
+            a
+               border: 2px solid white
+               color: white
+               padding: 12px 25px
+               text-transform: uppercase
+               font-weight: 600
+               letter-spacing: 2px
+@media only screen and (min-width: 720px)
+   header
+      nav
+         ul
+            text-align: right
+            li
+               padding: 10px
+      .post-slider-wrapper
+         width: 720px
+         height: 480px
+         margin: 0 auto
+         overflow-x: hidden
+         .post-slider
+            height: 100%
+            left: 0%
+            .slider-item
+               .slider-item-title
+                  font-size: 32px
+@media only screen and (min-width: 1200px)
+   header
+      .post-slider-wrapper
+         width: 1000px
+         height: 600px
+         .post-slider
+            height: 100%
+            .slider-item
+               .slider-item-title
+                  font-size: 42px

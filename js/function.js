@@ -2,6 +2,29 @@
 ---
 
 $(document).ready(function(){
+   //var position = $('.slider-item').css("left");
+   var position = 0;
+   var move= 100;
+   $('.prev').click(function(){
+      console.log("prev");
+      if(position>=100){
+         move= position-move
+         $('.post-slider').css('left', '-'+move+'%');
+         position-=100;
+         move=100;
+      }
+      console.log('prev move: '+move);
+   });
+   $('.next').click(function(){
+      console.log("next");
+      if(position<=100){
+         move= position+move
+         $('.post-slider').css('left', '-'+move+'%');
+         position+=100;
+         move=100;
+      }
+      console.log('next move: '+move);
+   });
    $('.post-aside-cta').click(function(){
       $('.post-block').toggleClass('post-aside-open');
       if($('.post-block').hasClass('post-aside-open')){

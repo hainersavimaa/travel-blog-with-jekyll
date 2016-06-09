@@ -1,0 +1,56 @@
+main
+   .blog-index
+      overflow-x: hidden
+      .section-header
+         font-size: 16px
+         text-transform: uppercase
+         letter-spacing: 1px
+         text-align: center
+         margin: 5vh 0
+      .categories-list
+         width: 100%
+         text-align: center
+      .search-area
+         input
+            width: 100%
+            border: 0
+            border-bottom: 1px solid #999
+            padding: 5px 0
+            margin: 10px 0 10vh
+            display: block
+            &:focus
+               outline: none
+      ul.post-box a li .thumbnail .image-wrapper img, ul.post-box-cat a li .thumbnail .image-wrapper img
+         top: -37px
+      .close-btn, .cta-fix
+         display: none
+      .results
+         margin-top: 10vh
+      .results .post-box p:first-child
+         display: none
+      .results .post-box .result .result-body p
+         display: block
+@media only screen and (min-width: 720px)
+   main
+      .blog-index
+         .section-header
+            margin: 10vh 0 5vh
+         .categories-list
+            margin: 0 auto
+            width: 300px
+         .search-area
+            width: 100%
+            margin: 0 auto 10vh
+            padding: 0 2px
+            input
+               width: 275px
+               margin: 0 auto
+         ul.post-box, ul.post-box-cat
+            width: 90%
+            a
+               max-width: 30%
+@media only screen and (min-width: 1420px)
+   main
+      .blog-index
+         ul.post-box a, ul.post-box-cat a
+            max-width: 22%

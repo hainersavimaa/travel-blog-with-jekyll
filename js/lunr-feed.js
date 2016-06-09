@@ -29,7 +29,7 @@ var store = [{% for post in site.posts %}{
 // builds search
 $(document).ready(function() {
   $('input#search').on('keyup', function () {
-    //$('.all-posts-wrap').hide();
+    $('.all-posts-wrap').hide();
     $('.post-aside .search-area').addClass('search-active');
     if($('.post-aside .search-area').hasClass('search-active')){
       $('.post-aside-cta').hide();
@@ -63,10 +63,11 @@ $(document).ready(function() {
 });
 //Show posts by category
    $('.categories-list span:not(:first-child)').click(function(){
+      $('.all-posts-wrap').show();
       $('.all-posts-wrap .post-box').hide();
       $('.all-posts-wrap .post-box-cat').show();
       $('.post-aside .search-area').removeClass('search-active');
-      //$('#results').show();
+      $('#results').hide();
       var resultdiv = $('.all-posts-wrap .post-box-cat');
       // Get query
       var query = $(this).text();
@@ -75,7 +76,7 @@ $(document).ready(function() {
       // Show results
       resultdiv.empty();
       // Add status
-      resultdiv.prepend('<p class="">Category has '+result.length+' result(s)</p>');
+      //resultdiv.prepend('<p class="">Category has '+result.length+' result(s)</p>');
       // Loop through, match, and add results
       for (var item in result) {
         var ref = result[item].ref;

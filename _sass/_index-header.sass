@@ -1,7 +1,11 @@
 header
    overflow: hidden
    nav
-      border-bottom: 1px solid #eee
+      .header-logo
+         text-align: center
+         font-size: 18px
+         font-weight: 600
+         margin: 20px 0 10px
       ul
          margin: 0
          padding: 0
@@ -9,21 +13,17 @@ header
          li
             list-style: none
             display: inline-block
-            padding: 20px 5px
+            padding: 5px 5px
             margin: 8px
             a
                color: #666
                font-size: 14px
                font-weight: 600
                text-transform: uppercase
-   .header-logo
-      height: 15vh
-      h1
-         text-align: center
-         font-size: 32px
    .post-slider-wrapper
       width: 100%
       position: relative
+      box-shadow: 0px 0px 16px -5px rgba(0,0,0,0.75)
       span.navigation
          display: block
          position: absolute
@@ -81,11 +81,25 @@ header
                letter-spacing: 2px
 @media only screen and (min-width: 720px)
    header
+      background-color: #f6f6f6
       nav
+         position: relative
+         margin-bottom: 10vh
+         .header-logo
+            position: absolute
+            top: 10px
+            left: 50%
+            transform: translate(-50%,-50%)
          ul
             text-align: right
+            padding-right: 5%
             li
                padding: 10px
+               a
+                  font-weight: 400
+                  letter-spacing: 2px
+                  font-size: 13px
+
       .post-slider-wrapper
          width: 720px
          height: 480px

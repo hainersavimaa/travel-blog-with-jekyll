@@ -28,6 +28,7 @@ var store = [{% for post in site.posts %}{
 }{% unless forloop.last %},{% endunless %}{% endfor %}]
 // builds search
 $(document).ready(function() {
+  $('#results').hide();
   $('input#search').on('keyup', function () {
     $('.all-posts-wrap').hide();
     $('.post-aside .search-area').addClass('search-active');

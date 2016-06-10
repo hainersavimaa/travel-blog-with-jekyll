@@ -1,27 +1,60 @@
 main
-   .blog-index
-      overflow-x: hidden
+   section
       .section-header
          font-size: 16px
          text-transform: uppercase
          letter-spacing: 1px
          text-align: center
          margin: 5vh 0
+      &:after
+         content: ""
+         width: 75%
+         height: 2px
+         background-color: #eee
+         display: block
+         margin: 50px auto 0
+   section.about
+      padding: 5% 5% 0
+      .about-text-wrapper
+         text-align: center
+         font-size: 15px
+         line-height: 1.6
+         letter-spacing: 0.3px
+         color: #333
+   .blog-index
+      overflow-x: hidden
       .categories-list
          width: 100%
          text-align: center
       .search-area
          input
-            width: 100%
+            width: 90%
             border: 0
             border-bottom: 1px solid #999
             padding: 5px 0
-            margin: 10px 0 10vh
+            margin: 10px auto
             display: block
             &:focus
                outline: none
       ul.post-box a li .thumbnail .image-wrapper img, ul.post-box-cat a li .thumbnail .image-wrapper img
          top: -37px
+      ul.post-box, ul.post-box-cat
+         a
+            box-shadow: none
+            margin: 20px 0
+            li
+               .thumbnail
+                  height: 75%
+                  .image-wrapper img
+                     top: 0px
+               .result-body
+                  height: 25%
+                  text-align: center
+                  .post-title
+                     margin-bottom: 2px
+                  .post-date
+                     position: static
+
       .close-btn, .cta-fix
          display: none
       .results
@@ -32,9 +65,11 @@ main
          display: block
 @media only screen and (min-width: 720px)
    main
+      max-width: 1080px
+      margin: 0 auto
       .blog-index
          .section-header
-            margin: 10vh 0 5vh
+            margin: 50px 0
          .categories-list
             margin: 0 auto
             width: 300px
@@ -44,14 +79,15 @@ main
             padding: 0 2px
             input
                width: 225px
-               margin: 10px auto
+               margin: 10px auto 10vh
          ul.post-box, ul.post-box-cat
-            width: 90%
-            margin: 0 auto
             a
-               max-width: 30%
+               margin: 10px
+               max-width: 30.5%
 @media only screen and (min-width: 1420px)
    main
       .blog-index
-         ul.post-box a, ul.post-box-cat a
-            max-width: 22%
+         ul.post-box, ul.post-box-cat
+            width: 100%
+            a
+               max-width: 31.5%

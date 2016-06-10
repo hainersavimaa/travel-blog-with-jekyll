@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="blog-index">
-   <header>
+   <header class="index-header">
       <nav>
          <div class="header-logo">Janne&Hainer</div>
          <ul>
@@ -19,7 +19,7 @@ layout: default
          <div class="post-slider">
             {% for post in site.posts | limit:3 %}
                <div class="slider-item" style="background-image: url({{site.baseurl}}/img/sm/{{post.cover-sm}});">
-                  <span class="tag">Latest</span>
+                  <span class="tag">Featured</span>
                   <p class="slider-item-title">{{post.title}}</p>
                   <a href="{{site.baseurl}}/{{post.url}}" class="post-cta">Read more</a>
                </div>

@@ -38,28 +38,7 @@ layout: default
    </div>
    </header>
    <main>
-      <section class="about">
-         <h1 class="section-header">About</h1>
-         <div class="about-text-wrapper">
-            <p>Tattooed wayfarers waistcoat, wolf cray offal umami.</p>
-            <p>Church-key kale chips umami trust fund. Brunch mustache, banjo readymade semiotics fap street art meh blue bottle artisan normcore before they sold out.</p>
-            <p>Deep v raw denim trade, migas everyday helvetica readymade taxidermy aesthetic letterpress.</p><p> Bitters freegan hammock, gluten-free direct trade twee humblebrag. Bitters waistcoat humblebrag hammock single-origin coffee trust fund, meditation mustache gentrify synth literally blog.</p>
-            <div class="social-icons">
-               <a href="#"><object type="image/svg+xml" data="{{site.baseurl}}/img/icons/facebook.svg">
-                  Your browser does not support SVG
-               </object></a>
-               <a href="#"><object type="image/svg+xml" data="{{site.baseurl}}/img/icons/instagram.svg">
-                  Your browser does not support SVG
-               </object></a>
-               <a href="#"><object type="image/svg+xml" data="{{site.baseurl}}/img/icons/youtube.svg">
-                  Your browser does not support SVG
-               </object></a>
-               <a href="#"><object type="image/svg+xml" data="{{site.baseurl}}/img/icons/pinterest.svg">
-                  Your browser does not support SVG
-               </object></a>
-            </div>
-         </div>
-      </section>
+      {% include about-section.html %}
       {{content}}
       <section class="instagram-feed">
          <h1 class="section-header">Instagram feed</h1>

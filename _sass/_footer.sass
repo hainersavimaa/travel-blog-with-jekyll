@@ -1,0 +1,68 @@
+footer
+   //background-color: #000
+   text-align: center
+   padding: 50px 0 10px
+   display: flex
+   flex-direction: column
+   align-items: center
+   .col
+      flex-basis: 100%
+   .col-1, .col-3
+      display: flex
+      justify-content: center
+      align-items: center
+   .col-1
+      span, a
+         display: block
+         margin: 5px 0
+      a
+         color: #666
+   .col-2
+      .contact_us
+         display: inline-block
+         color: #666
+         text-transform: uppercase
+         margin-bottom: 20px
+      .subscribe
+         width: 75%
+         height: auto
+         min-width: 300px
+         min-height: 200px
+         margin: 10px auto
+         padding: 20px
+         background-color: rgb(168,122,122)
+         h2
+            color: rgba(255,255,255,0.4)
+         p
+            color: white
+            font-size: 13px
+         input
+            width: 100%
+            border: 1px solid rgba(0,0,0,0.12)
+            outline: none
+            padding: 10px
+         a
+            opacity: 0.8
+            display: inline-block
+            padding: 1em 2.5em
+            margin: 25px 0 20px
+            text-align: center
+            background-color: #4d4d4d
+            border: 1px solid #4d4d4d
+            color: white
+            text-transform: uppercase
+            font-size: 15px
+            white-space: nowrap
+            &:hover
+               opacity: 1
+   span
+      font-size: 13px
+      color: #999
+      display: block
+@media only screen and (min-width: 720px)
+   footer
+      height: 70vh
+      flex-direction: row
+      .col
+         height: 100%
+         flex-basis: 33%

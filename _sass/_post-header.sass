@@ -4,6 +4,15 @@ header.post-header
    background-color: white
    color: white
    padding: 5%
+   .home-link
+      position: absolute
+      top: 7px
+      left: 5%
+      z-index: 20
+      text-decoration: none
+      color: rgba(255,255,255,0.6)
+      h1
+         font-size: 24px
    .container
       display: inline-block
       z-index: 0
@@ -61,19 +70,32 @@ header.post-header
             text-decoration: none
             margin: 0 10px 0 0
 @media only screen and (min-width:620px)
-   header.post-header .header-post-info h1
-      font-size: 40px
-@media only screen and (min-width:720px)
+   header.post-header
+      .home-link h1
+         font-size: 28px
+      .header-post-info h1
+         font-size: 40px
+@media only screen and (min-width: 720px)
    header.post-header
       width: 50%
       float: left
       height: 100vh
+      .home-link
+         left: 10%
+         h1
+            font-size: 24px
       .header-post-info
          top: 60px
          h1
             font-size: 46px
          .PageNavigation
             margin-top: 60px
-@media only screen and (min-width:1200px)
+@media only screen and (min-width: 940px)
+   header.post-header
+      .home-link
+         top: 4px
+         h1
+            font-size: 28px
+@media only screen and (min-width: 1200px)
    header.post-header .header-post-info h1
       font-size: 66px

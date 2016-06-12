@@ -14,38 +14,15 @@ layout: default
 
 <div class="blog-index">
    <header class="index-header">
-      <nav>
-         <div class="header-logo">Janne&Hainer</div>
-         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Contact</a></li>
-         </ul>
-      </nav>
-
-      <div class="post-slider-wrapper">
-         <span class="navigation prev">&#8249;</span>
-         <span class="navigation next">&#8250;</span>
-         <div class="post-slider">
-            {% for post in site.posts | limit:3 %}
-               <div class="slider-item" style="background-image: url({{site.baseurl}}/img/sm/{{post.cover-sm}});">
-                  <span class="tag">Featured</span>
-                  <p class="slider-item-title">{{post.title}}</p>
-                  <a href="{{site.baseurl}}/{{post.url}}" class="post-cta">Read more</a>
-               </div>
-            {% endfor %}
-         </div>
-   </div>
+      {% include header-nav.html %}
+      {% include post-slider.html %}
    </header>
    <main>
       {% include about-section.html %}
+
       {{content}}
-      <section class="instagram-feed">
-         <h1 class="section-header">Instagram feed</h1>
-         <div id="insta-wrap">
-            <div id="instafeed" class="cf"></div>
-         </div>
-      </section>
+
+      {% include instagram-feed.html %}
    </main>
    {% include footer.html %}
 </div>

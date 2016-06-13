@@ -1,5 +1,9 @@
 ---
 layout: blog-index
 ---
-
-<h1><a href="{{site.baseurl}}/blog"> Take me to the blog!</a></h1>
+{% include about-section.html %}
+<section class="blog-index">
+   <h1 class="section-header">Latest posts</h1>
+   {% include post-archives.html %}
+   </ul>
+</section>

@@ -1,21 +1,22 @@
 ---
 ---
-@import "normalize"
+@import "tools/normalize"
+@import "tools/colours"
 @import "index-page"
 @import "blog-index"
 @import "about-index"
-@import "about-section"
-@import "header-nav"
-@import "post-slider"
-@import "social-icons"
-@import "footer"
-@import "instafeed"
-@import "post-block"
-@import "post-header"
-@import "post-content"
-@import "post-aside"
-@import "post-box"
-@import "post_archive"
+@import "modules/about-section"
+@import "modules/header-nav"
+@import "modules/post-slider"
+@import "modules/social-icons"
+@import "modules/instafeed"
+@import "modules/post-box"
+@import "includes/footer"
+@import "posts/post-block"
+@import "posts/post-header"
+@import "posts/post-content"
+@import "posts/post-aside"
+@import "posts/post_archive"
 
 html
    box-sizing: border-box
@@ -41,26 +42,26 @@ body
          top: 20px
          right: 20px
          z-index: 30
-         border: 2px solid rgba(255,255,255,1)
+         border: 2px solid $white
          padding: 10px 19px 10px 20px
          font-size: 14px
          font-weight: bold
          letter-spacing: 2px
          text-transform: uppercase
          text-decoration: none
-         color: rgba(255,255,255,1)
+         color: $white
          transition: all 0.3s ease
          &:hover
-            color: rgba(255,255,255,0.7)
-            border-color: rgba(255,255,255,0.7)
+            color: $white07
+            border-color: $white07
       .post-aside-open-hidden
          display: none
       .cta-open
-         border-color: #999
-         color: #999
+         border-color: $light-gray
+         color: $light-gray
          &:hover
-            color: #666
-            border-color: #333
+            color: $medium-gray
+            border-color: $dark-gray
    .ui-loader
       display: none
 @media only screen and (min-width: 720px)

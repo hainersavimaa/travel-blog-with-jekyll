@@ -1,8 +1,8 @@
 header.post-header
    position: relative
    height: 85vh
-   background-color: white
-   color: white
+   background-color: $white
+   color: $white
    padding: 5%
    .home-link
       position: absolute
@@ -10,7 +10,7 @@ header.post-header
       left: 5%
       z-index: 20
       text-decoration: none
-      color: rgba(255,255,255,0.6)
+      color: $white07
       h1
          font-size: 18px
    .container
@@ -52,8 +52,6 @@ header.post-header
          font-size: 13px
          letter-spacing: 1px
          font-weight: 400
-         &:hover
-            color: rgba(255,255,255,0.8)
          &:first-child:after
             content: "|"
             margin: 0 0px 0 5px
@@ -101,3 +99,6 @@ header.post-header
 @media only screen and (min-width: 1200px)
    header.post-header .header-post-info h1
       font-size: 66px
+@media only screen and (min-width: 1200px)
+   header.post-header .header-post-info
+      top: 130px

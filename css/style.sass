@@ -1,21 +1,25 @@
 ---
 ---
+
 @import "tools/normalize"
 @import "tools/colours"
 @import "index-page"
 @import "blog-index"
+@import "blog-home"
 @import "about-index"
+
+@import "modules/post-aside"
 @import "modules/about-section"
 @import "modules/header-nav"
 @import "modules/post-slider"
 @import "modules/social-icons"
 @import "modules/instafeed"
 @import "modules/post-box"
+
 @import "includes/footer"
 @import "posts/post-block"
 @import "posts/post-header"
 @import "posts/post-content"
-@import "posts/post-aside"
 @import "posts/post_archive"
 
 html
@@ -64,6 +68,7 @@ body
             border-color: $dark-gray
    .ui-loader
       display: none
+
 @media only screen and (min-width: 720px)
    body
       height: 100vh

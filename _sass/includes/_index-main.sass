@@ -15,19 +15,8 @@ main
          margin: 50px auto 0
    .blog-index
       overflow-x: hidden
-      .categories-list
-         width: 100%
-         text-align: center
-      .search-area
-         input
-            width: 90%
-            border: 0
-            border-bottom: 1px solid $light-gray
-            padding: 5px 0
-            margin: 10px auto
-            display: block
-            &:focus
-               outline: none
+      .categories-list, .search-area
+         display: none
       ul.post-box a li .thumbnail .image-wrapper img, ul.post-box-cat a li .thumbnail .image-wrapper img
          top: -37px
       ul.post-box, ul.post-box-cat
@@ -62,16 +51,6 @@ main
       .blog-index
          .section-header
             margin: 50px 0
-         .categories-list
-            margin: 0 auto
-            width: 300px
-         .search-area
-            width: 100%
-            margin: 0 auto 10vh
-            padding: 0 2px
-            input
-               width: 225px
-               margin: 10px auto 10vh
          ul.post-box, ul.post-box-cat
             a
                margin: 10px

@@ -2,20 +2,19 @@
    header
       overflow: hidden
       position: relative
-
+      &:after
+         position: absolute
+         content: ""
+         display: block
+         top: 0
+         bottom: 15%
+         left: 0
+         right: 0
+         background-size: cover
+         background-position: center
+         z-index: 0
 @media only screen and (min-width: 720px)
    .blog-index
       header
          &:after
-            position: absolute
-            content: ""
-            display: block
-            top: 0
-            bottom: 15%
-            left: 0
-            right: 0
-         &:after
             background-image: url(../img/header-bg.jpg)
-            background-size: cover
-            background-position: center
-            z-index: 0

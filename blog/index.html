@@ -1,5 +1,5 @@
 ---
-layout: blog-index
+layout: blog-home
 title: Blog
 ---
 <section class="blog-index">
@@ -12,42 +12,48 @@ title: Blog
       </form>
    </div>
    {% for post in paginator.posts %}
-     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-     <p class="author">
-       <span class="date">{{ post.date }}</span>
-     </p>
-     <div class="content-wrap">
-        <div class="content cover-thumbnail">
-          <img src="{{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}}"/>
-        </div>
-        <div class="content exerpt">
-          {{ post.content | strip_html | truncatewords: 50 }}
-        </div>
-     </div>
+      <article class="blog-post">
+        <a href="{{site.baseurl}}/{{post.url}}">
+           <div class="content-wrap">
+              <div class="content cover-thumbnail" style="background-image: url({{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}}); height: 250px; width: 250px">
+              </div></a>
+              <div class="content text">
+                 <a href="{{site.baseurl}}/{{post.url}}"><h1>{{ post.title }}</h1></a>
+                 <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+                 <p class="blog-post-exerpt">
+                    {{ post.content | strip_html | truncatewords: 100 }}
+                 </p>
+              </div>
+           </div>
+
+    </article>
    {% endfor %}
+
    {% if paginator.total_pages > 1 %}
    <div class="pagination">
+
      {% if paginator.previous_page %}
-       <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+       <a class="pagination-nav active" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
      {% else %}
-       <span>&laquo; Prev</span>
+       <span class="pagination-nav inactive">&laquo; Prev</span>
      {% endif %}
 
      {% for page in (1..paginator.total_pages) %}
        {% if page == paginator.page %}
-         <em>{{ page }}</em>
+         <em class="pagination-number inactive">{{ page }}</em>
        {% elsif page == 1 %}
-         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+         <a class="pagination-number active" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
        {% else %}
-         <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+         <a class="pagination-number active" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
        {% endif %}
      {% endfor %}
 
      {% if paginator.next_page %}
-       <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+       <a class="pagination-nav active" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
      {% else %}
-       <span>Next &raquo;</span>
+       <span class="pagination-nav inactive">Next &raquo;</span>
      {% endif %}
+
    </div>
    {% endif %}
 

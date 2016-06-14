@@ -15,14 +15,15 @@ title: Blog
       <article class="blog-post">
         <a href="{{site.baseurl}}/{{post.url}}">
            <div class="content-wrap">
-              <div class="content cover-thumbnail" style="background-image: url({{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}}); height: 250px; width: 250px">
+              <div class="content cover-thumbnail" style="background-image: url({{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}});">
               </div></a>
               <div class="content text">
                  <a href="{{site.baseurl}}/{{post.url}}"><h1>{{ post.title }}</h1></a>
-                 <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
                  <p class="blog-post-exerpt">
                     {{ post.content | strip_html | truncatewords: 100 }}
                  </p>
+                 <span class="date">{{ post.date | date: '%B %d, %Y' }}</span>
+                 <a class="read-post-cta" href="{{site.baseurl}}/{{post.url}}">Read post&rarr;</a>
               </div>
            </div>
 

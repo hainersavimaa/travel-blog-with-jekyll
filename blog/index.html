@@ -4,19 +4,17 @@ title: Blog
 ---
 <section class="blog-index">
    <h1 class="section-header">Latest posts</h1>
-   <div class="search-form-wrap">
+   <div class="search-form-wrap cf">
       <form action="{{site.baseurl}}/search.html" method="get">
-         <label for="search-box">search</label>
-         <input type="text" id="search-box" name="query">
-         <input type="submit" value="search">
+         <input placeholder="Search" type="text" id="search-box" name="query">
       </form>
    </div>
+   <div class="articles-wrapper">
    {% for post in paginator.posts %}
       <article class="blog-post">
         <a href="{{site.baseurl}}/{{post.url}}">
-           <div class="content-wrap">
-              <div class="content cover-thumbnail" style="background-image: url({{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}});">
-              </div></a>
+           <div class="content-wrap cf">
+              <div class="content cover-thumbnail" style="background-image: url({{site.baseurl}}/img/thumbnails/{{ post.cover-thumb}});"></div></a>
               <div class="content text">
                  <a href="{{site.baseurl}}/{{post.url}}"><h1>{{ post.title }}</h1></a>
                  <p class="blog-post-exerpt">
@@ -57,6 +55,5 @@ title: Blog
 
    </div>
    {% endif %}
-
-
+   </div>
 </section>

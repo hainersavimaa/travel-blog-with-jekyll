@@ -7,6 +7,7 @@ article.blog-post
       margin: 30px auto
       background: #eee
    .content-wrap
+      margin: 40px 0
       .content
       .cover-thumbnail
          width: 100%
@@ -23,11 +24,48 @@ article.blog-post
          h1
             margin: 0
             font-size: 20px
+            text-transform: uppercase
+            letter-spacing: 0.5px
          .date, .read-post-cta
             font-size: 13px
+         .date
+            color: $light-gray
          .read-post-cta
             float: right
             padding-top: 4px
+            color: #f9b862
          .blog-post-exerpt
             font-size: 14px
             line-height: 1.8
+.pagination
+   text-align: center
+   .active
+      color: #333
+   .inactive
+      color: #666
+   .pagination-nav
+      letter-spacing: 0.7px
+      padding: 0 5px
+   .pagination-number
+      padding: 0 2px
+@media only screen and (min-width: 720px)
+   article.blog-post
+      padding: 0 5%
+      .content-wrap
+         .cover-thumbnail
+            max-width: 30%
+            height: 220px
+            padding-bottom: 0
+         .text
+            padding-top: 0
+            margin-left: 2%
+            margin-right: 0
+            max-width: 65%
+            font-size: 14px
+            .blog-post-exerpt
+               letter-spacing: 0.2px
+            .read-post-cta
+               float: none
+               padding-left: 15px
+         .content
+            float: left

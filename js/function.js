@@ -3,8 +3,9 @@
 
 $(document).ready(function(){
    $('#nav-icon').click(function(){
+      $('nav ul').toggleClass('nav-open');
 		$(this).toggleClass('open');
-      $('.index-page').toggleClass('index-page-nav-open');
+      $('.site-container').toggleClass('index-page-nav-open');   
 	});
    //var position = $('.slider-item').css("left");
    var position = 0;

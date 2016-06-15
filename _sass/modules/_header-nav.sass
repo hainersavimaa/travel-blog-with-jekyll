@@ -1,16 +1,15 @@
 nav
    position: relative
    z-index: 200
-   background-color: $white
    .header-logo
-      text-align: center
       font-size: 22px
       font-weight: 600
       margin: 20px 0 10px
       font-family: 'Merriweather', serif
+      color: $white
    ul
       margin: 0
-      padding: 0
+      padding: 30px 0
       text-align: center
       li
          list-style: none
@@ -18,11 +17,10 @@ nav
          padding: 5px 5px
          margin: 8px
          a
-            color: $medium-gray
+            color: $white
             font-size: 14px
             font-weight: 600
             text-transform: uppercase
-
 @media only screen and (min-width: 720px)
    nav
       position: relative
@@ -30,8 +28,8 @@ nav
       margin-bottom: 10vh
       .header-logo
          position: absolute
-         top: 10px
-         left: 50%
+         top: 40px
+         left: 15%
          transform: translate(-50%,-50%)
          font-size: 48px
       ul
@@ -40,6 +38,12 @@ nav
          li
             padding: 10px 2px
             a
-               font-weight: 400
-               letter-spacing: 2px
-               font-size: 13px
+               font-weight: 600
+               letter-spacing: 1px
+         .homelink
+            border: 2px solid white
+            padding: 15px 25px
+            transition: all 0.1s ease-in-out
+            &:hover
+               color: #333
+               background-color: white

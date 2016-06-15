@@ -14,35 +14,9 @@ header.post-header
       h1
          font-size: 18px
    .container
-      display: inline-block
-      z-index: 0
-      position: absolute
-      top: 0
-      right: 0
-      bottom: 0
-      left: 0
-      overflow: hidden
       background: #4b6cb7 /* fallback for old browsers */
       background: -webkit-linear-gradient(to left, #4b6cb7 , #182848) /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to left, #4b6cb7 , #182848) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      .header-cover
-         z-index: 0
-         position: absolute
-         top: 50%
-         left: 50%
-         width: auto
-         height: auto
-         max-height: none
-         max-width: 100%
-         min-height: 100%
-         min-width: 100%
-         opacity: 0
-         transition: opacity 0.6s ease
-         transform: translate(-50%, -50%)
-         -ms-transform: translate(-50%, -50%)
-         -webkit-transform: translate(-50%, -50%)
-      &.loaded .header-cover
-         opacity: 1
    .header-post-info
       position: relative
       top: 30%

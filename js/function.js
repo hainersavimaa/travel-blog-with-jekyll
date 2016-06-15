@@ -2,6 +2,10 @@
 ---
 
 $(document).ready(function(){
+   $('#nav-icon').click(function(){
+		$(this).toggleClass('open');
+      $('.index-page').toggleClass('index-page-nav-open');
+	});
    //var position = $('.slider-item').css("left");
    var position = 0;
    var move= 100;

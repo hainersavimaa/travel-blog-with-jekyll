@@ -3,10 +3,11 @@ layout: post
 title:  Lorem impsum dolor sit amet
 date:   2016-05-31 17:28:07 +0300
 categories: flights
-place: Lorem
+place: israel
 cover: cover.jpg
 cover-sm: cover-sm.jpg
 cover-thumb: cover-thumb.jpg
+tags: featured
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

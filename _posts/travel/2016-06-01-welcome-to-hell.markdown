@@ -6,7 +6,8 @@ categories: travel
 cover: cover3.jpg
 cover-sm: cover3-sm.jpg
 cover-thumb: cover3-thumb.jpg
-place: Instanbul
+place: turkey
+tags: featured
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

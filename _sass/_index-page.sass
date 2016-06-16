@@ -13,7 +13,34 @@
          background: #E6DADA /* fallback for old browsers */
          background: -webkit-linear-gradient(to left, #E6DADA , #274046) /* Chrome 10-25, Safari 5.1-6 */
          background: linear-gradient(to left, #E6DADA , #274046) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      h1
+         position: absolute
+         z-index: 1
+         color: $white07
+         text-transform: uppercase
+         font-size: 44px
+         letter-spacing: 0.5px
+         text-align: center
+         width: 100%
+         bottom: -60px
    main
       background-color: $white
 .index-page-nav-open
    right: 75%
+@media only screen and (min-width: 420px)
+   .index-page header h1
+      font-size: 62px
+      bottom: -64px
+@media only screen and (min-width: 720px)
+   .index-page header h1
+      font-size: 110px
+      bottom: -30px
+      margin-bottom: 0
+@media only screen and (min-width: 850px)
+   .index-page header h1
+      font-size: 132px
+      bottom: -35px
+@media only screen and (min-width: 1250px)
+   .index-page header h1
+      font-size: 192px
+      bottom: -50px

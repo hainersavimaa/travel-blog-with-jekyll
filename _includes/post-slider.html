@@ -2,7 +2,7 @@
    <span class="navigation prev">&#8249;</span>
    <span class="navigation next">&#8250;</span>
    <div class="post-slider">
-      {% for post in site.posts | limit:3 %}
+      {% for post in site.tags.featured | limit:3 %}
          <div class="slider-item" style="background-image: url({{site.baseurl}}/img/sm/{{post.cover-sm}});">
             <span class="tag">Featured</span>
             <p class="slider-item-title">{{post.title}}</p>

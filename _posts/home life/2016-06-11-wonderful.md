@@ -1,11 +1,13 @@
 ---
 layout: post
 title: Well behaved mustache in Paris
+place: israel
 cover: cover2.jpg
 cover-sm: cover2-sm.jpg
 cover-thumb: cover2-thumb.jpg
 categories: travel
 place: Paris
+tags: top
 ---
 
 2008 is a leap year. That means that three hundred and sixty six days ago, almost to the minute, I was sitting alone in a booth at Zeke's Sports Bar and Grill on 3rd Street in San Francisco. I wouldn't normally hang out at a sports bar, let alone a sports bar in SOMA, but back then Thursday was "I Can Has Ruby" night. I guess back then "I can has _______" was also a reasonable moniker to attach to pretty much anything. ICHR was a semi-private meeting of like minded Ruby Hackers that generally and willingly devolved into late night drinking sessions. Normally these nights would fade away like my hangover the next morning, but this night was different. This was the night that "GitHub":http://github.com/ was born.

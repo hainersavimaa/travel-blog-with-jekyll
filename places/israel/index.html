@@ -1,0 +1,10 @@
+---
+layout: page
+title: Israel & Palestine
+---
+<h1>Israel & Palestine posts</h1>
+{% for post in site.posts %}
+   {% if post.place == 'israel & palestine' %}
+      <span>{{post.title}}</title>
+   {% endif %}
+{% endfor %}

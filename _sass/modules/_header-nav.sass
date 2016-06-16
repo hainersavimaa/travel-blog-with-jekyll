@@ -27,11 +27,28 @@ nav
          display: block
          padding: 5px 5px
          margin: 8px
+         position: relative
          a
             color: $white
             font-size: 14px
             font-weight: 600
             text-transform: uppercase
+         .sub-nav
+            position: relative
+            padding: 0
+            margin: 0
+            max-height: 0px
+            overflow: hidden
+            width: 100%
+            text-align: center
+            transition: 0.5s max-height ease-in-out
+            z-index: 1
+            li a
+               font-weight: 400
+         .sub-nav-open
+            padding: 10px 0
+            max-height: 700px
+
 @media only screen and (min-width: 720px)
    nav
       position: relative

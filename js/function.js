@@ -2,10 +2,15 @@
 ---
 
 $(document).ready(function(){
+   if ($(window).width() < 720) {
+      $('.places a').click(function(){
+         $('.sub-nav').toggleClass('sub-nav-open');
+      });
+   }
    $('#nav-icon').click(function(){
       $('nav ul').toggleClass('nav-open');
 		$(this).toggleClass('open');
-      $('.site-container').toggleClass('index-page-nav-open');   
+      $('.site-container').toggleClass('index-page-nav-open');
 	});
    //var position = $('.slider-item').css("left");
    var position = 0;

@@ -1,12 +1,11 @@
 ---
 layout: post
 title: Well behaved mustache in Paris
-place: israel
+place: israel & palestine
 cover: cover2.jpg
 cover-sm: cover2-sm.jpg
 cover-thumb: cover2-thumb.jpg
 categories: travel
-place: Paris
 tags: top
 ---
 

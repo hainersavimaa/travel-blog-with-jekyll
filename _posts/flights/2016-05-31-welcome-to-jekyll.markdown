@@ -3,7 +3,7 @@ layout: post
 title:  Lorem impsum dolor sit amet
 date:   2016-05-31 17:28:07 +0300
 categories: flights
-place: israel
+place: israel & palestine
 cover: cover.jpg
 cover-sm: cover-sm.jpg
 cover-thumb: cover-thumb.jpg

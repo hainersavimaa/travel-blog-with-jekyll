@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<div class="site-container">
+   <div class="index-page">
+      {% include header.html %}
+      <main>
+         <section class="place-section blog-index">
+            <h1 class="section-header">Introduction</h1>
+            {% for post in site.posts %}
+               {% if post.type == 'place-intro' %}
+                  {% if post.intro-location == {{page.type}} %}
+                     <p>{{post.content}}</p>
+                  {% endif %}
+               {% endif %}
+            {% endfor %}
+            <div class="all-posts-wrap cf">
+               <h1 class="section-header">All posts from {{page.title}}</h1>
+               <ul class="post-box cf">
+                  {% for post in site.posts %}
+                     {% if post.place == {{page.type}} %}
+                     <a href="{{site.baseurl}}/{{post.url}}">
+                        <li>
+                           <div class="thumbnail">
+                              <div class="image-wrapper">
+                                 <img src="{{site.baseurl}}/img/sm/{{post.cover-sm}}">
+                              </div>
+                           </div>
+                           <div class="result-body">
+                              <p class="post-title">{{post.title}}</p>
+                              <p class="post-date">{{post.categories}}&times;{{post.date | date: '%B %d, %Y'}}</p>
+                           </div>
+                        </li>
+                     </a>
+                     {% endif %}
+                  {% endfor %}
+               </ul>
+            </div>
+         </section>
+      </main>
+      {% include footer.html %}
+   </div>
+</div>

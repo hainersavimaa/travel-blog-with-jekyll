@@ -13,6 +13,9 @@ header-image-sm: blog-sm.jpg
    </div>
    <div class="articles-wrapper">
    {% for post in paginator.posts %}
+   {% if post.type == 'place-intro' %}
+   {% else if %}
+
       <article class="blog-post">
         <a href="{{site.baseurl}}/{{post.url}}">
            <div class="content-wrap cf">
@@ -26,8 +29,8 @@ header-image-sm: blog-sm.jpg
                  <a class="read-post-cta" href="{{site.baseurl}}/{{post.url}}">Read post&rarr;</a>
               </div>
            </div>
-
     </article>
+    {% endif %}
    {% endfor %}
 
    {% if paginator.total_pages > 1 %}
